@@ -1,16 +1,12 @@
-# RAG Bot - Viral Content Analysis Assistant
+# RAG Bot -  Document Q&A Assistant
 
-A custom Retrieval-Augmented Generation (RAG) system that analyzes documents and viral video content (e.g., TikTok/Instagram) to answer questions and extract high-engagement insights using open-source embeddings and LangChain.
+A custom Retrieval-Augmented Generation (RAG) system that analyzes documents to answer questions using open-source embeddings and LangChain.
 
 ## 🚀 What It Does
 
 This RAG bot:
-- Accepts your PDF/TXT files or scraped content (e.g., captions, hashtags, comments)
+- Accepts your PDF/TXT files
 - Embeds them using **open-source sentence transformers**
-- Allows you to ask questions like:
-  - "What makes this video go viral?"
-  - "What emotions or hooks were used?"
-  - "Which clips had ridiculous endings?"
 - Returns GPT-generated responses **based on actual content**, not hallucinations.
 
 ---
