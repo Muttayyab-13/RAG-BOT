@@ -24,6 +24,7 @@ cd rag-bot
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
+```
 
 ### 3. 📂 Add Your Data
 
@@ -36,7 +37,7 @@ Place them in the `documents/` folder
 
 ```bash
 python setup.py
-
+```
 This script:
 
 - Loads documents
@@ -51,8 +52,9 @@ This script:
 ####  Command-Line
 ```bash
 python rag_bot.py
-
+```
 
 #### WEB APP
 ```bash
 streamlit run app.py
+```
