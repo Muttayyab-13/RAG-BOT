@@ -15,10 +15,14 @@ This RAG bot:
 
 ### 1. **Clone and Setup**
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Muttayyab-13/RAG-BOT
+
 cd rag-bot
+
 python -m venv venv
+
 source venv/bin/activate  # On Windows: venv\Scripts\activate
+
 pip install -r requirements.txt
 ```
 
