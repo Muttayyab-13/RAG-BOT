@@ -2,3 +2,4 @@
 chroma_db
 documents
 .env
+__pycache__
