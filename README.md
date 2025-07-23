@@ -56,5 +56,5 @@ python rag_bot.py
 
 #### WEB APP
 ```bash
-streamlit run app.py
+python -m streamlit run app.py
 ```

@@ -21,6 +21,6 @@ def create_vector_store(documents):
 def load_vector_store():
     vectorstore = Chroma(
         persist_directory=PERSIST_DIR,
-        embedding=embedding_model,  # 👈 USE "embedding", not "embedding_function"
+        embedding_function=embedding_model,  # 👈 USE "embedding", not "embedding_function"
     )
     return vectorstore
