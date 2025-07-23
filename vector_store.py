@@ -1,5 +1,5 @@
 from langchain_community.vectorstores.chroma import Chroma
-from langchain_huggingface.embeddings import HuggingFaceEmbeddings
+from langchain.embeddings import HuggingFaceEmbeddings
 from dotenv import load_dotenv
 import os
 
