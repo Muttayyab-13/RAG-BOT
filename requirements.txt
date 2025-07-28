@@ -8,3 +8,4 @@ python-dotenv
 langchain-community
 pypdf
 huggingface_hub
+llama-cpp-python

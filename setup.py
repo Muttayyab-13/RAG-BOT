@@ -1,17 +1,26 @@
-from document_loader import load_documents, split_documents
-from vector_store import create_vector_store
+from langchain_community.vectorstores.chroma import Chroma
+from langchain.embeddings import HuggingFaceEmbeddings
+from dotenv import load_dotenv
+import os
 
-def setup_rag_system():
-    print("Loading documents...")
-    documents = load_documents("documents")
-    
-    print("Splitting documents...")
-    split_docs = split_documents(documents)
-    
-    print("Creating vector store...")
-    vectorstore = create_vector_store(split_docs)
-    
-    print("Setup complete!")
+load_dotenv()
 
-if __name__ == "__main__":
-    setup_rag_system()
+embedding_model = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+PERSIST_DIR = "./chroma_db"
+
+def create_vector_store(documents):
+    vectorstore = Chroma.from_documents(
+        documents=documents,
+        embedding=embedding_model,  # 👈 USE "embedding", not "embedding_function"
+        persist_directory=PERSIST_DIR,
+    )
+    vectorstore.persist()
+    return vectorstore
+
+
+def load_vector_store():
+    vectorstore = Chroma(
+        persist_directory=PERSIST_DIR,
+        embedding_function=embedding_model,  # 👈 USE "embedding", not "embedding_function"
+    )
+    return vectorstore
