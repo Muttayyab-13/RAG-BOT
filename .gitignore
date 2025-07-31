@@ -1,5 +1,7 @@
 .venv
 chroma_db
-documents
 .env
 __pycache__
+models/mistral-7b-instruct-v0.1.Q4_K_M.gguf
+documents/*.pdf
+models/*.gguf
