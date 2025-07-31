@@ -7,7 +7,7 @@ A custom Retrieval-Augmented Generation (RAG) system that analyzes documents to 
 This RAG bot:
 - Accepts your PDF/TXT files
 - Embeds them using **open-source sentence transformers**
-- Returns mistral-generated responses **based on actual content**, not hallucinations.
+- Returns responses **based on actual content**, not hallucinations.
 
 ---
 
